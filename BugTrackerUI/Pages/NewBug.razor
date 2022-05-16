@@ -1,13 +1,13 @@
 @page "/new-bug"
 
-<h3>Add NewBug</h3>
+<h3>Add New Bug</h3>
 
 
 <EditForm Model="AddBug">
     <InputText @bind-value="@AddBug.Title" placeholder="Enter Title" />
     <InputText @bind-value="@AddBug.Description" placeholder="Enter Description" />
-    <InputText @bind-value="@AddBug.Priority" placeholder="Enter priority"></InputText>
-    <Button type="submit" OnValidSubmit="HandleValidSubmit">Add Bug</Button>
+    <InputText @bind-value="@AddBug.Priority" placeholder="Enter Priority"></InputText>
+    <Button type="submit" OnValidSubmit="@HandleValidSubmit">Add Bug</Button>
     <DataAnnotationsValidator/> 
     <ValidationSummary/>
 </EditForm>
